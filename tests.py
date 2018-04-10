@@ -7,6 +7,20 @@ Created on Sun Mar 25 11:41:10 2018
 
 import math
 
+def Euler(n, base):
+    # n is the variable being tested for primality
+    # base should be coprime to number
+    if (base**((n - 1) / 2) - 1) % n == 0 or (base**((n - 1) / 2) + 1) % n == 0:
+        return True
+    else:
+        return False
+
+def even(n):
+    if n % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
 def factor(n, primes):
     factors = []
     if n <= 1:
@@ -17,14 +31,6 @@ def factor(n, primes):
                 factors.append(p)
                 n = n // p
     return factors
-
-def Euler(n, base):
-    # n is the variable being tested for primality
-    # base should be coprime to number
-    if (base**((n - 1) / 2) - 1) % n == 0 or (base**((n - 1) / 2) + 1) % n == 0:
-        return True
-    else:
-        return False
 
 def Fermat(n, base):
     # number is the variable being tested for primality
