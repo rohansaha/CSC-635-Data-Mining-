@@ -20,7 +20,7 @@ def main(index):
         for i in range(2, index):
             countDivisors = tests.countDivisors(i)
             countFactors = tests.countPrimeFactors(i, primes)
-            even = tests.even(n)
+            even = tests.even(i)
             Fermat = tests.Fermat(i,2)
             Fibonacci = tests.Fibonacci(i)
             Gauss = tests.GaussianPrime(i, primes)
