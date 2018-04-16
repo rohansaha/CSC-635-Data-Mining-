@@ -13,14 +13,13 @@ def main(index):
     with open("Data.csv", 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
         
-        writer.writerow(["Number","# of Divisors","# of Factors","Even","Fermat",
+        writer.writerow(["Number","# of Divisors","# of Factors","Fermat",
                          "Fibonacci","Gaussian Prime","Highly Composite","Mod 5",
                          "Mod 6","Powerful","Prime","Pronic","Squarefree"])
 
         for i in range(2, index):
             countDivisors = tests.countDivisors(i)
             countFactors = tests.countPrimeFactors(i, primes)
-            even = tests.even(i)
             Fermat = tests.Fermat(i,2)
             Fibonacci = tests.Fibonacci(i)
             Gauss = tests.GaussianPrime(i, primes)
@@ -33,7 +32,7 @@ def main(index):
             squarefree = tests.squarefree(i, primes)
             
             writer.writerow([str(i), str(countDivisors), str(countFactors),
-                             str(even), str(Fermat), str(Fibonacci), str(Gauss),
+                             str(Fermat), str(Fibonacci), str(Gauss),
                              str(highlyComposite), str(mod5), str(mod6),
                              str(powerful), str(prime), str(pronic), str(squarefree)])
 
