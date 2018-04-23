@@ -26,7 +26,10 @@ def main(index):
             mod5 = tests.mod5(i)
             mod6 = tests.mod6(i)
             powerful = tests.powerful(i, primes)
-            prime = i in primes
+            if i in primes:
+                prime = 1
+            else:
+                prime = 0
             pronic = tests.pronic(i)
             squarefree = tests.squarefree(i, primes)
             
